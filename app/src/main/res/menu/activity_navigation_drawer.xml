@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:yourapp="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tasks"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/events_item" />
+        <item
+            android:id="@+id/nav_scheduler"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/statistic_item" />
+    </group>
+
+    <item android:title="Статистика">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_total"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Общая" />
+            <item
+                android:id="@+id/nav_expanded"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Расширенная" />
+            </group>
+        </menu>
+
+    </item>
+
+    <item android:title="Дополнительно">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_tools"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="@string/tools_item" />
+            </group>
+        </menu>
+
+    </item>
+
+</menu>

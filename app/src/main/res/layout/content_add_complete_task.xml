@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_add_complete_task"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jevil.mindreactor.Events.TabEvents.AddCompleteEvent"
+    tools:showIn="@layout/activity_add_complete_task">
+
+    <ImageButton
+        android:id="@+id/ibStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ibPlay"
+        android:layout_toStartOf="@+id/ibPlay"
+        android:background="@android:color/transparent"
+        android:visibility="invisible"
+        app:srcCompat="@mipmap/ic_stop" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="57dp"
+        android:text="8"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/tvMark"
+        android:layout_marginStart="41dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvBenefit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvType"
+        android:layout_below="@+id/tvMark"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timePicker"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="7dp"
+        android:text="Выберите продолжительность"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/ibPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBenefit"
+        android:layout_toStartOf="@+id/tvMark"
+        android:background="@android:color/transparent"
+        app:srcCompat="@mipmap/ic_play" />
+
+    <Chronometer
+        android:id="@+id/chronometer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ibStop"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="11dp"
+        android:layout_toStartOf="@+id/ibStop"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvEverydayEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvBenefit"
+        android:layout_below="@+id/tvBenefit"
+        android:text="TextView" />
+
+</RelativeLayout>
