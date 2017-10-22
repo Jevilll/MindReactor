@@ -4,16 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="64dp"
-    android:layout_weight="1">
+    android:layout_weight="1"
+    android:background="@android:color/transparent">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ibSetTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvBenefit"
         android:layout_toStartOf="@+id/tvMark"
         android:background="@android:color/transparent"
-        app:srcCompat="@mipmap/ic_play"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="320dp" />
+        app:srcCompat="@mipmap/ic_set_time"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <ImageButton
+        android:id="@+id/ibPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBenefit"
+        android:layout_toStartOf="@+id/tvMark"
+        android:background="@android:color/transparent"
+        app:srcCompat="@mipmap/ic_pause"
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <Chronometer
+        android:id="@+id/chronometer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="22dp" />
 </android.support.constraint.ConstraintLayout>

@@ -37,7 +37,7 @@ public class ServiceNotification extends Service {
         RemoteViews remoteViews = new RemoteViews(this.getPackageName(), R.layout.notification_timer);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext());
-        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setSmallIcon(R.mipmap.ic_play);
         builder.setContent(remoteViews);
         builder.setOngoing(true);
 
@@ -51,9 +51,9 @@ public class ServiceNotification extends Service {
 //        intent.putExtra("action2", "first2");
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, getIntent(0), PendingIntent.FLAG_UPDATE_CURRENT);
-        remoteViews.setOnClickPendingIntent(R.id.btn, pendingIntent);
+        remoteViews.setOnClickPendingIntent(R.id.ibSetTime, pendingIntent);
         PendingIntent pendingIntent2 = PendingIntent.getBroadcast(this, 1, getIntent(1), PendingIntent.FLAG_UPDATE_CURRENT);
-        remoteViews.setOnClickPendingIntent(R.id.btn2, pendingIntent2);
+        remoteViews.setOnClickPendingIntent(R.id.ibPause, pendingIntent2);
 
         NotificationManager notificationManager = (NotificationManager) context
                 .getSystemService(Context.NOTIFICATION_SERVICE); // Создаем экземпляр менеджера уведомлений

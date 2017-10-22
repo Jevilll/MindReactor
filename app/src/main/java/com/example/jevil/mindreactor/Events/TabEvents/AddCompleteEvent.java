@@ -171,7 +171,7 @@ public class AddCompleteEvent extends AppCompatActivity implements View.OnClickL
 //                    ibPlay.setImageResource(R.mipmap.ic_pause);
 //                }
 //                break;
-            case R.id.ibStop: //остановка
+            case R.id.ibPause: //остановка
                 ibStop.setVisibility(View.INVISIBLE);
                 timeWhenStopped = chronometer.getBase() - SystemClock.elapsedRealtime();
 
@@ -208,7 +208,7 @@ public class AddCompleteEvent extends AppCompatActivity implements View.OnClickL
         mTimePicker.setIs24HourView(true);
         ibPlay = (ImageButton) findViewById(R.id.ibPlay);
         ibPlay.setOnClickListener(this);
-        ibStop = (ImageButton) findViewById(R.id.ibStop);
+        ibStop = (ImageButton) findViewById(R.id.ibPause);
         ibStop.setOnClickListener(this);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_add_complete_task);
         fab.setOnClickListener(this);

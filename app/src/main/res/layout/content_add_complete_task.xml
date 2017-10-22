@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_add_complete_task">
 
     <ImageButton
-        android:id="@+id/ibStop"
+        android:id="@+id/ibPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/ibPlay"
@@ -78,10 +78,10 @@
         android:id="@+id/chronometer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ibStop"
+        android:layout_alignTop="@+id/ibPause"
         android:layout_marginEnd="15dp"
         android:layout_marginTop="11dp"
-        android:layout_toStartOf="@+id/ibStop"
+        android:layout_toStartOf="@+id/ibPause"
         android:textSize="20sp"
         android:visibility="invisible" />
 
