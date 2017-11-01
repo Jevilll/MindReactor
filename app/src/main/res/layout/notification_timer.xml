@@ -1,38 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="64dp"
-    android:layout_weight="1"
-    android:background="@android:color/transparent">
-
-    <ImageButton
-        android:id="@+id/ibSetTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvBenefit"
-        android:layout_toStartOf="@+id/tvMark"
-        android:background="@android:color/transparent"
-        app:srcCompat="@mipmap/ic_set_time"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="8dp" />
-
-    <ImageButton
-        android:id="@+id/ibPause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvBenefit"
-        android:layout_toStartOf="@+id/tvMark"
-        android:background="@android:color/transparent"
-        app:srcCompat="@mipmap/ic_pause"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="8dp" />
+    android:layout_height="64dp">
 
     <Chronometer
-        android:id="@+id/chronometer3"
+        android:id="@+id/chronometer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="22dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_set_time" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_pause" />
+</LinearLayout>

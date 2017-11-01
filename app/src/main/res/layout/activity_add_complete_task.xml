@@ -7,9 +7,18 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.jevil.mindreactor.Events.TabEvents.AddCompleteEvent">
 
-    <include layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <include layout="@layout/content_add_complete_task" />
+        <include layout="@layout/toolbar" />
+
+        <include
+            layout="@layout/content_add_complete_task"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_add_complete_task"

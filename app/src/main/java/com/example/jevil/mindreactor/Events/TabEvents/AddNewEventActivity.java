@@ -21,7 +21,7 @@ import com.example.jevil.mindreactor.R;
 
 public class AddNewEventActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText etName, etMark, etMinutes;
+    EditText etName, etMark;
     RadioButton rbCont, rbOnce, rbUseful, rbHarmful;
 
     private DBHelper dbHelper;
@@ -74,7 +74,6 @@ public class AddNewEventActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.rbOnce:
                 typeEvent = "once";
-                etMinutes.setVisibility(View.INVISIBLE);
                 break;
             case R.id.rbUseful:
                 benefit = "useful";

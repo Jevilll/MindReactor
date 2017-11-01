@@ -154,9 +154,9 @@ public class HelpClass {
         Cursor c = dbC.query(DBHelperC.TABLE_C_TASKS, null, selection, selectionArgs, null, null, null);
         c.moveToLast();
         if (c.getCount() != 0) {
-            if (getDiffDateMinutes(Calendar.getInstance().getTimeInMillis(), c.getLong(c.getColumnIndex("time"))) >= 60) { // заносим данные только когда больше часа
+            if (getDiffDateMinutes(Calendar.getInstance().getTimeInMillis(), c.getLong(c.getColumnIndex("time"))) >= 240) { // заносим данные только когда больше 4 часов
                 long lifeTaxesMinutes = getDiffDateMinutes(Calendar.getInstance().getTimeInMillis(), c.getLong(c.getColumnIndex("time")));
-                float mark = 1;
+                float mark = 2;
                 dbHelperC = new DBHelperC(context);
                 dbC = dbHelperC.getWritableDatabase();
                 ContentValues contentValues = new ContentValues(); // добавляем строки в таблицу (ключ - значение)
@@ -167,19 +167,19 @@ public class HelpClass {
                 contentValues.put(DBHelperC.KEY_BENEFIT, "lifeTaxes");  // польза или вред
                 contentValues.put(DBHelperC.KEY_TIME, Calendar.getInstance().getTimeInMillis());
 
-                float marks = lifeTaxesMinutes * mark / 60;
-                contentValues.put(dbHelperC.KEY_MARKS, marks); // сумма баллов
-                dbC.insert(dbHelperC.TABLE_C_TASKS, null, contentValues); //добавление данных в БД
+                float marks = lifeTaxesMinutes * mark / 240;
+                contentValues.put(DBHelperC.KEY_MARKS, marks); // сумма баллов
+                dbC.insert(DBHelperC.TABLE_C_TASKS, null, contentValues); //добавление данных в БД
             }
-        } else {
+        } else { // при первом запуске
             dbHelperC = new DBHelperC(context);
             dbC = dbHelperC.getWritableDatabase();
             ContentValues contentValues = new ContentValues(); // добавляем строки в таблицу (ключ - значение)
-            float mark = 1;
+            float mark = 2;
             contentValues.put(DBHelperC.KEY_NAME, "Налог на жизнь"); // название
-            contentValues.put(DBHelperC.KEY_MARK, 1); // балл за час или разово
+            contentValues.put(DBHelperC.KEY_MARK, 2); // балл за час или разово
             contentValues.put(DBHelperC.KEY_TYPE, "cont"); // тип, продолжительное или разовое
-            contentValues.put(DBHelperC.KEY_MINUTES, 60); // количество минут
+            contentValues.put(DBHelperC.KEY_MINUTES, 240); // количество минут
             contentValues.put(DBHelperC.KEY_BENEFIT, "lifeTaxes");  // польза или вред
             contentValues.put(DBHelperC.KEY_TIME, Calendar.getInstance().getTimeInMillis());
             float marks = 60 * mark / 60;

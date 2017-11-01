@@ -40,7 +40,7 @@ public class StoryAdapter  extends RecyclerView.Adapter<StoryHolder> {
     public StoryAdapter(ArrayList<StoryListItem> items, Context context) {
         this.context = context;
         getData(items);
-        sdf = new SimpleDateFormat("d MMMM yyyy hh:mm aaa");
+        sdf = new SimpleDateFormat("d MMMM yyyy HH:mm");
         helpClass = new HelpClass();
     }
 
@@ -96,7 +96,7 @@ public class StoryAdapter  extends RecyclerView.Adapter<StoryHolder> {
                 Intent intent = new Intent();
                 intent.setClass(context, AddCompleteEvent.class);
                 intent.putExtra("type", "edit");
-                intent.getIntExtra("id", item.getBDitemID());
+                intent.putExtra("_id", item.getBDitemID());
                 StoryListItem.selectedItem = item;
                 context.startActivity(intent);
                 break;

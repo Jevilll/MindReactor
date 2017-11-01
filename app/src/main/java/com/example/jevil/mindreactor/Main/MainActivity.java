@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.jevil.mindreactor.Events.MyService;
+import com.example.jevil.mindreactor.Services.MyService;
 import com.example.jevil.mindreactor.Events.TabEvents.EventsFragment;
 import com.example.jevil.mindreactor.Other.HelpClass;
 import com.example.jevil.mindreactor.Other.InDevelopingFragment;
@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+            //finish();
         }
     }
 

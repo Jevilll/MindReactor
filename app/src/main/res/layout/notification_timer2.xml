@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/ivPause"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="9dp"
+        android:contentDescription="ffff"
+        android:src="@mipmap/ic_pause" />
+
+    <Chronometer
+        android:id="@+id/chronometer3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="32sp" />
+
+
+    <ImageView
+        android:id="@+id/ivSetTime"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/chronometer3"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="9dp"
+        android:layout_toStartOf="@+id/ivPause"
+        android:contentDescription="ffff"
+        android:src="@mipmap/ic_set_time" />
+</RelativeLayout>
